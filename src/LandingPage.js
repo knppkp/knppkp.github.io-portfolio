@@ -5,7 +5,7 @@ function LandingPage() {
     <div className="relative bg-[#19191b] min-h-screen text-white overflow-x-hidden">
       {/* Gradient Decorations */}
       <div>
-        <div className="absolute w-[350px] h-[1200px] -left-[400px] top-[0px]">
+        <div className="absolute w-[350px] h-[1200px] -left-[300px] -mt-[500px]">
           <div
             className="absolute inset-0 rounded-[200px] bg-gradient-to-b from-[#5454D4] to-[#5454D4]/[0.42] blur-2xl
             opacity-20 rotate-[-54deg] scale-[1.3]"
@@ -20,8 +20,12 @@ function LandingPage() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10"> 
-        <p>Main content goes here</p>
+      <div className="relative z-10">
+        <div className="mt-[150px] ml-[120px]">
+          <p className="font-bold text-7xl">Hello!</p>
+          <p className="font-bold text-7xl">I'm Khawpun!</p>
+        </div> 
+        
       </div>
     </div>
   );
