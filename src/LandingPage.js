@@ -1,9 +1,8 @@
 import React from "react";
 import SkillCard from "./SkillCard";
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "./ProjectCard";
 
 function LandingPage() {
-
   return (
     <div className="relative bg-[#19191b] min-h-screen text-white overflow-x-hidden">
       {/* Gradient Decorations */}
@@ -23,85 +22,111 @@ function LandingPage() {
       </div>
 
       {/* Navigation Bar */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-[#1c1c1f] py-4 px-8 flex justify-between items-center shadow-lg">
-        <div className="font-bold text-2xl">knppkp</div>
-        <div className="space-x-6">
-          <a href="#header" className="hover:text-[#5454D4]">Home</a>
-          <a href="#experience" className="hover:text-[#5454D4]">Experience</a>
-          <a href="#skill" className="hover:text-[#5454D4]">Skills</a>
-          <a href="#project" className="hover:text-[#5454D4]">Projects</a>
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#1c1c1f] py-4 px-6 md:px-8 flex justify-between items-center shadow-lg">
+        <div className="font-bold text-xl md:text-2xl">knppkp</div>
+        <div className="hidden md:flex space-x-6">
+          <a href="#header" className="hover:text-[#5454D4]">
+            Home
+          </a>
+          <a href="#experience" className="hover:text-[#5454D4]">
+            Experience
+          </a>
+          <a href="#skill" className="hover:text-[#5454D4]">
+            Skills
+          </a>
+          <a href="#project" className="hover:text-[#5454D4]">
+            Projects
+          </a>
         </div>
-        <div className="w-[160px] h-[40px] border-white border-2 flex justify-center items-center rounded-lg">
-          <a 
+        <div className="hidden md:flex w-[160px] h-[40px] border-white border-2 justify-center items-center rounded-lg">
+          <a
             className="text-white"
-            href="https://www.linkedin.com/in/natavee-pecharat" 
-            target="_blank" 
+            href="https://www.linkedin.com/in/natavee-pecharat"
+            target="_blank"
             rel="noopener noreferrer"
-          >Contact me</a>
+          >
+            Contact me
+          </a>
         </div>
-      </div>
+        {/* Mobile menu */}
+        <div className="md:hidden">
+          <a href="#header" className="text-[#5454D4]">
+            Menu
+          </a>
+        </div>
+      </nav>
 
       {/* Main Content */}
-      <div className="relative z-10">
-        {/* header */}
-        <div id="header">
-          <div className="mt-[150px] ml-[120px]">
-            <p className="font-bold text-7xl">Hello!</p>
-            <p className="font-bold text-7xl">I'm Natavee!</p>
-            <div className="mt-10 text-white text-opacity-70 text-lg">
-              <p>I am a 2nd-year Software Engineering student with expertise in full-stack development.</p>
-              <p>Passionate about tackling real-world problems through projects,</p> 
-              <p>I am also exploring emerging fields like machine learning and cyber security.</p>
+      <main className="relative z-10 pt-[120px] md:pt-[150px]">
+        {/* Header */}
+        <section id="header" className="px-6 md:ml-[120px]">
+          <h1 className="font-bold text-4xl md:text-7xl">
+            Hello! <br /> I'm Natavee!
+          </h1>
+          <p className="mt-6 text-white text-opacity-70 text-lg leading-relaxed">
+            I am a 2nd-year Software Engineering student with expertise in
+            full-stack development. Passionate about tackling real-world
+            problems through projects, I am also exploring emerging fields like
+            machine learning and cyber security.
+          </p>
+        </section>
+
+        {/* Experience */}
+        <section id="experience" className="px-6 md:ml-[120px] mt-[100px]">
+          <h2 className="font-bold text-3xl md:text-6xl">Experience</h2>
+          <div className="mt-8 space-y-10">
+            <div className="p-6 border-l-4 border-[#5454D4]">
+              <h3 className="font-semibold text-xl md:text-2xl">
+                Intern Software Tester
+              </h3>
+              <p className="text-gray-400 text-sm">K TREE CORPORATION CO., LTD. · May 2024</p>
+              <p className="mt-2 text-white text-opacity-70">
+                Contributed to the Yak Software System, focusing on system
+                stability and performance improvement.
+              </p>
+              <ul className="mt-4 list-disc list-inside text-white">
+                <li>
+                  Created requirement-based diagrams in LucidChart to streamline
+                  and organize the testing workflow during the planning phase.
+                </li>
+                <li>
+                  Utilized Jira for efficient bug tracking and reporting,
+                  ensuring clear communication across software iterations.
+                </li>
+              </ul>
+            </div>
+            <div className="p-6 border-l-4 border-[#5454D4]">
+              <h3 className="font-semibold text-xl md:text-2xl">Teaching Assistant</h3>
+              <p className="text-gray-400 text-sm">
+                King Mongkut's Institute of Technology Ladkrabang · July 2024 –
+                November 2024
+              </p>
+              <p className="mt-2 text-white text-opacity-70">
+                Supported students in learning Python programming and provided
+                assistance in coursework and projects.
+              </p>
+              <ul className="mt-4 list-disc list-inside text-white">
+                <li>
+                  Guided students through Python programming concepts, helping
+                  them debug code and understand best practices.
+                </li>
+                <li>
+                  Encouraged a collaborative learning environment, enabling
+                  students to achieve academic success in programming courses.
+                </li>
+              </ul>
             </div>
           </div>
-        </div> 
-        {/* experience */}
-        <div id="experience">
-          <div className="mt-[200px] ml-[120px]">
-            <p className="font-bold text-6xl">Experience</p>
-            <div className="mt-10">
-              <div className="space-y-10">
-                <div className="p-6 border-l-4 border-[#5454D4]">
-                  <p className="font-semibold text-2xl">Intern Software Tester</p>
-                  <p className="text-gray-400 text-sm">K TREE CORPORATION CO., LTD. · May 2024</p>
-                  <p className="mt-2 text-lg text-white">
-                    Contributed to the Yak Software System, focusing on system stability and performance improvement.
-                  </p>
-                  <ul className="mt-4 list-disc list-inside text-white">
-                    <li>Created requirement-based diagrams in LucidChart to streamline and organize the testing workflow during the planning phase.</li>
-                    <li>Utilized Jira for efficient bug tracking and reporting, ensuring clear communication across software iterations.</li>
-                  </ul>
-                  <p className="mt-4 text-white">
-                    Gained hands-on experience in systematic testing processes, enhancing my ability to deliver high-quality software solutions through precise and structured approaches.
-                  </p>
-                </div>
-                <div className="p-6 border-l-4 border-[#5454D4]">
-                  <p className="font-semibold text-2xl">Teaching Assistant</p>
-                  <p className="text-gray-400 text-sm">
-                    King Mongkut's Institute of Technology Ladkrabang · July 2024 – November 2024
-                  </p>
-                  <p className="mt-2 text-lg text-white">
-                    Supported students in learning Python programming and provided assistance in coursework and projects.
-                  </p>
-                  <ul className="mt-4 list-disc list-inside text-white">
-                    <li>Guided students through Python programming concepts, helping them debug code and understand best practices.</li>
-                    <li>Encouraged a collaborative learning environment, enabling students to achieve academic success in programming courses.</li>
-                  </ul>
-                  <p className="mt-4 text-white">
-                    Developed strong mentorship and technical communication skills while fostering a supportive learning atmosphere for peers.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* skill */}
-        <div id="skill">
-          <div className="mt-[200px] mx-[80px] justify-items-center">
-            <p className="font-bold text-6xl">Skills</p>
-            <p className="mt-10 text-4xl">Programing Languages</p>
-            <div className="mt-6 justify-items-center grid grid-cols-3 gap-x-20 gap-y-10">
-              <SkillCard 
+        </section>
+
+        {/* Skills */}
+        <section id="skill" className="px-6 md:px-[80px] mt-[100px]">
+          <h2 className="font-bold text-3xl md:text-6xl">Skills</h2>
+          <div className="mt-8">
+            {/* Programming Languages */}
+            <h3 className="text-2xl md:text-4xl">Programming Languages</h3>
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8">
+            <SkillCard 
                 src="/portfolio/assets/python.png"
                 text="Python"
               />
@@ -114,7 +139,7 @@ function LandingPage() {
                 text="CSS"
               />
               <SkillCard 
-                src="/portfolio/assets/js.png"
+                src="/portfolio/assets/js.webp"
                 text="Javascript"
               />
               <SkillCard 
@@ -138,10 +163,12 @@ function LandingPage() {
                 text="Go"
               />
             </div>
-            <p className="mt-10 text-4xl">Frameworks</p>
-            <div className="mt-6 justify-items-center grid grid-cols-3 gap-x-20 gap-y-10">
-              <SkillCard 
-                src="/portfolio/assets/react.png"
+
+            {/* Frameworks */}
+            <h3 className="mt-12 text-2xl md:text-4xl">Frameworks & Tools</h3>
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8">
+            <SkillCard 
+                src="/portfolio/assets/react.webp"
                 color="#5454D4"
                 text="ReactJS"
               />
@@ -155,8 +182,6 @@ function LandingPage() {
                 color="#FEDC5A"
                 text="FastAPI"
               />
-            </div>
-            <div className="mt-10 justify-items-center grid grid-cols-2 gap-x-20 gap-y-10">
               <SkillCard 
                 src="/portfolio/assets/sqlalchemy.png"
                 color="#FEDC5A"
@@ -168,50 +193,52 @@ function LandingPage() {
                 text="TailwindCSS"
               />
             </div>
-            <p className="mt-10 text-4xl">Tools/Platforms</p>
-            <div className="mt-6 justify-items-center grid grid-cols-2 gap-x-20 gap-y-10">
-              <SkillCard 
+
+            {/* Other Tools */}
+            <h3 className="mt-12 text-2xl md:text-4xl">Other Tools</h3>
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8">
+            <SkillCard 
                 src="/portfolio/assets/postgres.png"
                 color="#5454D4"
                 text="PostgreSQL"
               />
               <SkillCard 
-                src="/portfolio/assets/render.svg"
+                src="/portfolio/assets/render.jpg"
                 color="#F04037"
                 text="Render"
               />
             </div>
           </div>
-        </div>
-        {/* Project */}
-        <div id="project">
-          <div className="mt-[200px]">
-            <p className="font-bold text-6xl ml-[120px]">Project</p>
-            <div className="mt-10 mx-[150px] justify-items-center grid grid-cols-2 gap-x-10 gap-y-10">
-              <ProjectCard
-                subject="COMPUTER PROGRAMMING"
-                src="/portfolio/assets/python.png" 
-                clip="/portfolio/assets/makethegrade_clip.mp4"
-                name="Make the Grade"
-                description="A grade calculation for KMITL Software Engineering students, to help student plan the studies and decides to choose study track." 
-                color="84, 84, 212" 
-              />
-              <ProjectCard
-                subject="OBJECT-ORIENTED PROGRAMMING"
-                src="/portfolio/assets/kiddoquest.png"
-                clip="/portfolio/assets/kiddoquest_clip.mp4" 
-                name="KiddoQuest"
-                description="An educational game designed for middle school students, making learning fun and accessible." 
-                color="240, 64, 55" 
-                link="https://github.com/S-rita/KiddoQuest"
-              />
-              <ProjectCard
+        </section>
+
+        {/* Projects */}
+        <section id="project" className="px-6 md:px-[120px] mt-[100px]">
+          <h2 className="font-bold text-3xl md:text-6xl">Projects</h2>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 justify-items-center">
+            <ProjectCard
+              subject="COMPUTER PROGRAMMING"
+              src="/portfolio/assets/python.png"
+              clip="/portfolio/assets/makethegrade_clip.mp4"
+              name="Make the Grade"
+              description="A grade calculation tool for KMITL Software Engineering students."
+              color="84, 84, 212"
+            />
+            <ProjectCard
+              subject="OBJECT-ORIENTED PROGRAMMING"
+              src="/portfolio/assets/kiddoquest.png"
+              clip="/portfolio/assets/kiddoquest_clip.mp4"
+              name="KiddoQuest"
+              description="An educational game designed for middle school students."
+              color="240, 64, 55"
+              link="https://github.com/S-rita/KiddoQuest"
+            />
+            <ProjectCard
                 subject="WEB PROGRAMMING"
                 src="/portfolio/assets/coboard.svg" 
                 name="Coboard"
                 description="A forum for KMITL Software Engineering students, combining forums and chat for seamless communication and collaboration." 
                 color="254, 220, 90" 
-                link="https://gknppkp.me"
+                link="https://knppkp.me"
               />
               <ProjectCard
                 subject="COMPUTER ARCHITECTURE AND ORGANIZATION"
@@ -222,11 +249,10 @@ function LandingPage() {
                 color="55, 212, 164" 
                 link="https://github.com/S-rita/Chubby_Cat"
               />
-            </div>
           </div>
-        </div>
-      </div>
-      
+        </section>
+      </main>
+
       {/* Footer */}
       <footer className="w-full bg-[#1c1c1f] text-center py-4 text-sm mt-10">
         <p className="text-gray-400">
