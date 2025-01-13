@@ -203,7 +203,7 @@ function LandingPage() {
                 name="KiddoQuest"
                 description="An educational game designed for middle school students, making learning fun and accessible." 
                 color="240, 64, 55" 
-                link="portfolio/kiddoquest"
+                link="https://github.com/S-rita/KiddoQuest"
               />
               <ProjectCard
                 subject="WEB PROGRAMMING"
@@ -211,7 +211,7 @@ function LandingPage() {
                 name="Coboard"
                 description="A forum for KMITL Software Engineering students, combining forums and chat for seamless communication and collaboration." 
                 color="254, 220, 90" 
-                link="https://github.com/S-rita/KiddoQuest"
+                link="https://gknppkp.me"
               />
               <ProjectCard
                 subject="COMPUTER ARCHITECTURE AND ORGANIZATION"
